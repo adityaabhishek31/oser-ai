@@ -1,0 +1,34 @@
+.contactSection {
+  padding: 4rem 0rem;
+  text-align: center;
+  background-color: #ffffffe3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+}
+
+.contactContent {
+  padding: 2rem;
+  text-align: left;
+}
+
+.contactContent a {
+  color: #004AAD;
+  font-style: italic;
+}
+
+.contactImage img {
+  padding: 2rem;
+  width: 50vw;
+  max-width: 600px;
+  height: auto;
+}
+
+@media (max-width: 508px) {
+  .contactImage img {
+    padding: 0;
+    flex:1;
+  }
+}

@@ -1,0 +1,197 @@
+/* Homepage.module.css */
+.homepage {
+  color: #333;
+  line-height: 1.6;
+  position: relative;
+  background-image:
+    linear-gradient(rgba(220, 244, 252, 0.3), rgba(173, 216, 230, 0.3)),
+    url('../assets/img/homepage-background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+}
+
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: rgb(15, 15, 15);
+  text-align: center;
+  padding: 5rem 1rem 3rem 1rem;
+  padding-top: 3rem;
+}
+
+.heroImage {
+  max-width: 70vw;
+  height: auto;
+  margin-top: 2rem;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroContent h1 {
+  font-size: 4rem;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.heroDescription {
+  font-size: 2rem;
+  /* margin-bottom: 2rem; */
+  min-height: 7rem;
+  /* max-width: 600px; */
+}
+
+.heroDescriptionTypewriter,
+.textGradient {
+  background: linear-gradient(to right, #061a8b, #8b0658);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.ctaButtonTypeA {
+  background-color: #004AAD;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  width: 140px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.ctaButtonTypeB {
+  background-color: #ffffff;
+  color: #075ccc;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  width: 140px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.ctaButtonTypeA:hover {
+  background-color: #063a7e;
+  color: white;
+}
+
+.ctaButtonTypeB:hover {
+  background-color: #d1e1f7;
+  color: #004AAD;
+}
+
+/* .servicesSection,
+.contactSection {
+  padding: 4rem 0rem;
+  text-align: center;
+} */
+
+.aboutSection {
+  padding: 4rem 4rem;
+  text-align: center;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  background-color: rgba(255, 255, 255, 0.74);
+  border-radius: 30px;
+  margin: 20px;
+}
+
+.aboutSection p {
+  letter-spacing: 1px;
+}
+
+.servicesList {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.serviceItem {
+  flex: 1 1 calc(33.333% - 1rem);
+  background: #f9f9f9;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.featuresSection {
+  padding: 4rem 0rem;
+  max-width: 50vw;
+  align-self: center;
+}
+
+.learnMoreButton {
+  margin-top: 20px;
+}
+
+.serviceItem:hover {
+  background: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+  .homepage {
+    width: 100%;
+  }
+
+  .heroDescription {
+    max-width: 700px;
+  }
+  
+}
+
+@media (max-width:550px) {
+
+  /* .homepage {
+    width: 100vw;
+   } */
+  
+}
+
+@media (max-width: 450px) {
+
+  /* .homepage {
+    width: 100vw;
+   } */
+  .heroContent {
+    max-width: 70%;
+  }
+  .ctaButtons {
+    flex-direction: column;
+  }
+  .ctaButtonTypeA, .ctaButtonTypeB {
+    /* width: 40%; */
+  }
+}
