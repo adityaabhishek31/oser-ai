@@ -71,7 +71,7 @@ const Header = () => {
             </nav>
             <div className={styles.rightNav}>
                 <div className={styles.getStarted}>
-                    <button className={styles.getStartedButton} onClick={() => window.location.href = "/coming-soon"}>Get Started</button>
+                    <button className={styles.getStartedButton} onClick={() => window.location.href = "/#/coming-soon"}>Get Started</button>
                 </div>
                 <RxHamburgerMenu className={styles.hamburger} onClick={() => setIsMenuOpen(!isMenuOpen)} />
             </div>

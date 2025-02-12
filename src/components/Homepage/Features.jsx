@@ -14,7 +14,7 @@ const features = [
             "Optimize your charging networks with our advanced, no-code SaaS platform. Manage charging stations, monitor energy consumption, and streamline operations effortlessly, ensuring seamless EV charging experiences across various locations.",
         image: chargingImage,
         cta: "Learn more",
-        ctaLink: "/coming-soon",
+        ctaLink: "/#/coming-soon",
         reverse: false,
     },
     {
@@ -24,7 +24,7 @@ const features = [
             "Empower your fleet operations with real-time data insights and analytics. Track EV fleet performance, optimize charging schedules, and make data-driven decisions to enhance efficiency and reduce operational costs.",
         image: fleetImage,
         cta: "Get started",
-        ctaLink: "/coming-soon",
+        ctaLink: "/#/coming-soon",
         reverse: true,
     },
     {
@@ -34,7 +34,7 @@ const features = [
             "Support the transition to smarter, greener cities with EV charging solutions tailored for urban landscapes. Our scalable platform integrates with smart city infrastructure to ensure accessibility, sustainability, and convenience.",
         image: sustainCityImage,
         cta: "Learn More",
-        ctaLink: "/coming-soon",
+        ctaLink: "/#/coming-soon",
         reverse: false,
     },
     {
@@ -44,7 +44,7 @@ const features = [
             "Stay ahead in the e-mobility industry with actionable market insights and adoption tools. Leverage predictive analytics and trends to identify opportunities and drive EV adoption seamlessly.",
         image: marketIntelImage,
         cta: "Go to Dashboard",
-        ctaLink: "/coming-soon",
+        ctaLink: "/#/coming-soon",
         reverse: true,
     },
     {
@@ -54,7 +54,7 @@ const features = [
             "Revolutionize your customer service with AI/ML-powered chatbots. Provide instant assistance, resolve queries, and deliver localized support to ensure a superior user experience for EV owners and operators.",
         image: customerSupportImage,
         cta: "Get started",
-        ctaLink: "/coming-soon",
+        ctaLink: "/#/coming-soon",
         reverse: false,
     },
     {
@@ -64,7 +64,7 @@ const features = [
             "Offer your customers a variety of payment options, including contactless transactions and subscription models. Cater to frequent users and fleet owners with competitive pricing and priority access to charging networks.",
         image: profitImage,
         cta: "Pricing",
-        ctaLink: "/coming-soon",
+        ctaLink: "/#/coming-soon",
         reverse: true,
     },
 ];

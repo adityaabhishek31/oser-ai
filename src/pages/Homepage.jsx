@@ -76,7 +76,7 @@ const Homepage = () => {
                 <p>With a focus on innovation and sustainability, we aim to accelerate EV adoption and contribute to a greener, cleaner future. From effective fleet management to smart city solutions, our no-code software is built to meet the dynamic needs of the mobility sector.</p>
                 <p>Let us help you drive the future of electric mobility — together.
                 </p>
-                <button className={styles.learnMoreButton} onClick={() => window.location.href = "/coming-soon"}>Learn More</button>
+                <button className={styles.learnMoreButton} onClick={() => window.location.href = "/#/coming-soon"}>Learn More</button>
             </section>
 
 
