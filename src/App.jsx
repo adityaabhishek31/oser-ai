@@ -10,8 +10,8 @@ function App() {
       <div>
         <Routes>
           <Route path="/oser-ai" element={<Homepage />} />
-          <Route path="/about" element={<About />} />
-          <Route path='/coming-soon' element={<ComingSoon />} />
+          <Route path="/oser-ai/about" element={<About />} />
+          <Route path='/oser-ai/coming-soon' element={<ComingSoon />} />
         </Routes>
       </div>
     </Router>
