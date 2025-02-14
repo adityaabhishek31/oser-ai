@@ -8,7 +8,7 @@ const ContactUs = () => {
             <div className={styles.contactContent}>
                 <h2>Get in Touch</h2>
                 <p>Let&apos;s talk about your needs and queries.</p>
-                <p>We&apos;d love to hear from you! Reach out to us at <a href="mailto:info@oser.ai">info@oser.ai</a>.</p>
+                <p>We&apos;d love to hear from you! Reach out to us at <a href="mailto:support@oser.ai">support@oser.ai</a>.</p>
             </div>
             <div className={styles.contactImage}>
                 <img src={ContactUsImg} alt="contact us" />
