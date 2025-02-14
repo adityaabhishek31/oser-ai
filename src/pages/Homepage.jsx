@@ -12,11 +12,14 @@ import StationImage from '../assets/img/EV+charging.png'
 // import image5 from '../assets/img/demo img/img- (5).jpeg';
 import Features from '../components/Homepage/Features';
 import ContactUs from '../components/Homepage/ContactUs';
-import { useEffect } from 'react';
-import {Helmet} from "react-helmet";
+import { useEffect, useRef, useState } from 'react';
+import { Helmet } from "react-helmet";
 
 
 const Homepage = () => {
+    const [isVisible, setIsVisible] = useState(false);
+    const typewriterRef = useRef(null);
+
     useEffect(() => {
         const hash = window.location.hash;
         if (hash) {
@@ -30,6 +33,30 @@ const Homepage = () => {
         }
     }, []);
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(entry.isIntersecting);
+            },
+            {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            }
+        );
+
+        if (typewriterRef.current) {
+            observer.observe(typewriterRef.current);
+        }
+
+        return () => {
+            if (typewriterRef.current) {
+                observer.unobserve(typewriterRef.current);
+            }
+        };
+    }, []);
+
+
     return (
         <div id="home" className={styles.homepage}>
             <Helmet><title>Home | Oser.ai</title></Helmet>
@@ -38,26 +65,30 @@ const Homepage = () => {
                 <div className={styles.heroContent}>
                     <h1><span className={styles.textGradient}>The Future</span> of Electric Mobility</h1>
                     <p className={styles.heroDescription}>Advanced SaaS solutions for{' '}
-                        <span className={styles.heroDescriptionTypewriter}>
-                            <Typewriter
-                                words={[
-                                    'revolutionizing EV infrastructure',
-                                    'delivering smarter mobility solutions',
-                                    'empowering a greener tomorrow',
-                                    'optimizing charging networks',
-                                    'driving sustainable innovation',
-                                    'enabling seamless EV adoption',
-                                    'enhancing fleet management efficiency',
-                                    'accelerating e-mobility transformation'
-                                ]}
-                                loop={0}
-                                cursor
-                                cursorStyle='|'
-                                typeSpeed={65}
-                                deleteSpeed={45}
-                                delaySpeed={1500}
-                                cursorColor='black'
-                            />
+                        <span className={styles.heroDescriptionTypewriter} ref={typewriterRef}>
+                            {isVisible ? (
+                                <Typewriter
+                                    words={[
+                                        'revolutionizing EV infrastructure',
+                                        'delivering smarter mobility solutions',
+                                        'empowering a greener tomorrow',
+                                        'optimizing charging networks',
+                                        'driving sustainable innovation',
+                                        'enabling seamless EV adoption',
+                                        'enhancing fleet management efficiency',
+                                        'accelerating e-mobility transformation'
+                                    ]}
+                                    loop={0}
+                                    cursor
+                                    cursorStyle='|'
+                                    typeSpeed={65}
+                                    deleteSpeed={45}
+                                    delaySpeed={1500}
+                                    cursorColor='black'
+                                />
+                            ) : (
+                                <span>{'revolutionizing EV infrastructure'}</span>
+                            )}
                         </span>
                     </p>
                     <div className={styles.ctaButtons}>
