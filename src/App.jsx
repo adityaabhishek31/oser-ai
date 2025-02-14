@@ -32,9 +32,9 @@ function App() {
     <Router>
       <div>
         <Routes>
-          {/* <Route path="/" element={<Homepage />} />
+          <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<About />} />
-          <Route path="/coming-soon" element={<ComingSoon />} /> */}
+          <Route path="/coming-soon" element={<ComingSoon />} />
         </Routes>
       </div>
     </Router>
