@@ -26,6 +26,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import About from './pages/About';
 import ComingSoon from './pages/ComingSoon';
+import LoginSignUp from './pages/LoginSignUp';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<About />} />
           <Route path="/coming-soon" element={<ComingSoon />} />
+          <Route path="/get-started" element={<LoginSignUp />} />
         </Routes>
       </div>
     </Router>

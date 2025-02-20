@@ -1,0 +1,81 @@
+.oserStartupPage {
+    display: flex;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.oserStartupConatiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80vh;
+    width: 100vw;
+}
+
+.oserStartupConatiner img {
+    max-width: 400px;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 500;
+    color: #424242;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    color: #424242;
+    font-size: 15px;
+}
+
+.input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgba(155, 182, 255, 0.3));
+    color: #424242;
+}
+
+.button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.toggleText {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.toggleButton {
+    color: #424242;
+    cursor: pointer;
+    text-decoration: underline;
+    font-style: italic;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+}

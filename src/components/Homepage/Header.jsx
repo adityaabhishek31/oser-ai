@@ -31,12 +31,19 @@ const Header = () => {
             document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
         };
 
-        if (window.location.pathname !== '/') {
+        if (window.location.hash !== '') {
+            console.log( window.location)
+            console.log("from herer", window.location.hash);
+
             setHomeLink('/');
-            setAboutLink('/#about');
-            setServicesLink('/#services');
-            setContactLink('/#contact');
+            setAboutLink('/');
+            setServicesLink('/');
+            setContactLink('/');
         } else {
+            console.log("lets goo ", window.location.hash);
+
+            console.log(window.location.hash);
+
             setHomeLink("#home");
             setAboutLink("#about");
             setServicesLink("#services");
@@ -71,7 +78,7 @@ const Header = () => {
             </nav>
             <div className={styles.rightNav}>
                 <div className={styles.getStarted}>
-                    <button className={styles.getStartedButton} onClick={() => window.location.href = "/#/coming-soon"}>Get Started</button>
+                    <button className={styles.getStartedButton} onClick={() => window.location.href = "/#/get-started"}>Get Started</button>
                 </div>
                 <RxHamburgerMenu className={styles.hamburger} onClick={() => setIsMenuOpen(!isMenuOpen)} />
             </div>

@@ -14,6 +14,7 @@ import Features from '../components/Homepage/Features';
 import ContactUs from '../components/Homepage/ContactUs';
 import { useEffect, useRef, useState } from 'react';
 import { Helmet } from "react-helmet";
+import ChatBotOpener from '../components/ChatBotOpener';
 
 
 const Homepage = () => {
@@ -28,7 +29,7 @@ const Homepage = () => {
                 setTimeout(() => {
                     element.scrollIntoView({ behavior: 'smooth' });
                     window.history.replaceState({}, document.title, window.location.pathname);
-                }, 500);
+                }, 800);
             }
         }
     }, []);
@@ -61,6 +62,7 @@ const Homepage = () => {
         <div id="home" className={styles.homepage}>
             <Helmet><title>Home | Oser.ai</title></Helmet>
             <Header />
+            <ChatBotOpener />
             <section className={styles.heroSection}>
                 <div className={styles.heroContent}>
                     <h1><span className={styles.textGradient}>The Future</span> of Electric Mobility</h1>
