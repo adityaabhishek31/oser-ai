@@ -34,7 +34,10 @@ const ChatBot = () => {
     try {
       const response = await axios.post("https://chatbot-backend-1mld.onrender.com/api/chat/available-dates", {
         station,
-      });
+      },
+        {
+          withCredentials: true
+        });
 
       const dates = response.data.availableDates || [];
       const dateOptions = dates.map((date) => date);
@@ -60,7 +63,10 @@ const ChatBot = () => {
       const response = await axios.post("https://chatbot-backend-1mld.onrender.com/api/chat/available-times", {
         station: selectedStation,
         date,
-      });
+      },
+        {
+          withCredentials: true
+        });
 
       const times = response.data.availableTimes || [];
       const timeOptions = times.map((time) => time);
@@ -87,7 +93,10 @@ const ChatBot = () => {
         station: selectedStation,
         date: selectedDate,
         time,
-      });
+      },
+        {
+          withCredentials: true
+        });
 
       setMessages((prev) => [
         ...prev,
@@ -118,7 +127,10 @@ const ChatBot = () => {
           latitude: location.latitude,
           longitude: location.longitude,
         },
-      });
+      },
+        {
+          withCredentials: true
+        });
 
       const stations = response.data.nearestStations || [];
       const stationOptions = stations.map(
@@ -159,7 +171,10 @@ const ChatBot = () => {
         const response = await axios.post("https://chatbot-backend-1mld.onrender.com/api/chat/selected-option", {
           option,
           optionSubtype,
-        });
+        },
+          {
+            withCredentials: true
+          });
 
         setMessages((prev) => [
           ...prev,
@@ -193,7 +208,10 @@ const ChatBot = () => {
       try {
         const response = await axios.post("https://chatbot-backend-1mld.onrender.com/api/chat/message", {
           message: question || userInput,
-        });
+        },
+          {
+            withCredentials: true
+          });
 
         const botResponse = { sender: "bot", text: response.data.message };
         setMessages((prev) => [...prev, botResponse]);

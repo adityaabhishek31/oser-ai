@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styles from './LoginSignUp.module.css';
-import oser from "../assets/img/oser.ai-removebg white.png"
 import axios from 'axios';
 import Header from '../components/Homepage/Header';
 
@@ -22,7 +21,10 @@ function LoginSignUp() {
         e.preventDefault();
         try {
             const response = await axios.post("https://chatbot-backend-1mld.onrender.com/api/user/login",
-                { email, password });
+                { email, password },
+                {
+                    withCredentials: true
+                });
             console.log(response);
             if (response.status === 200) {
                 document.cookie = `jwt=${response.data._id}; path=/; samesite=strict; secure;`;
@@ -42,7 +44,10 @@ function LoginSignUp() {
         }
         try {
             const response = await axios.post("https://chatbot-backend-1mld.onrender.com/api/user/register",
-                { email, password });
+                { email, password },
+                {
+                  withCredentials: true
+                });
             console.log(response);
             if (response.status === 200) {
                 document.cookie = `jwt=${response.data._id}; path=/; samesite=strict; secure;`;
